@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.background{
+    background-color: #2596be;
+    background-size: cover;
+    background-position: center;
+    height: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-------------header--------- */
+.container {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+header {
+    background: #CC8C18;
+    padding: 1px 0 10px 15;
+    color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.5s ease-in-out;
+    background: white;
+  }
+  
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header ul {
+    padding: 0 20px 0 0;
+  }
+  
+  header li {
+    margin-right: 30px;
+  }
+  
+  header ul li a {
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+  
+  header ul li a:hover {
+    color: #000;
+  }
+  
+  header .head_contact {
+    position: relative;
+  }
+  
+  header .head_contact i {
+    position: absolute;
+    top: -29px;
+    left: -70%;
+    width: 80px;
+    height: 80px;
+    line-height: 50px;
+    text-align: center;
+    background: white;
+    color: #CC8C18;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    border: 5px solid #ECE3D2;
+    font-size: 30px;
+  }
+  
+  header .sticky_logo {
+    display: none;
+  }
+  
+  header.sticky .sticky_logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
+  }
+  
+  header.sticky {
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    background: #313538;
+    transition: 0.5s;
+    height: 12vh;
+    transition: 0.5s;
+    top: 0;
+    padding: 30px 0 0 0;
+  }
+  
+  header.sticky ul li a {
+    color: white;
+  }
+  
+  @media only screen and (max-width:768px) {
+  
+    /*------------head------------*/
+    .header .head_contact,
+    .logo {
+      display: none;
+    }
+  
+    /*------------head------------*/
+    header.sticky {
+      height: 8vh;
+    }
+  
+    header.sticky .nav-menu {
+      background: #313538;
+    }
+  
+    .navbar {
+      height: 5vh;
+      justify-content: space-between;
+    }
+  
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 11rem;
+      flex-direction: column;
+      background: #CC8C18;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 99;
+    }
+  
+    header.sticky .nav-menu {
+      top: 5rem;
+    }
+  
+    header ul li a {
+      color: white;
+    }
+  
+    .nav-menu.active {
+      left: 0;
+    }
+  
+    header li {
+      margin: 2.5rem 0;
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  /*--ContainerTable--*/
+  .containerTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 50px;
+    max-width: 60%;
+    width: 90%;
+    margin: auto;
+    margin-top: auto;
+}
+
+
+.containerTable h1 {
+    text-align: center;
+}
+
+.containerTable form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Adjust this value to change the width of the form */
+}
+
+.containerTable button {
+    margin-top: 10px;
+    background: rgb(52, 108, 204);
+    color: white;
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.largeTable{
+        width: 200%; /* Adjust this value as needed */
+        margin: auto; /* Center the form on the page */
+}
+
+/*
+.form-group {
+    display: flex;
+    flex-direction: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.form-group label {
+    font-weight: bold; /*Makes the label text bold 
+    margin-bottom: 20px; /* Adds some space between the label and the input field
+    margin-top: 5%;
+}
+
+.inputGroupContainer {
+    /* Adjust this value to change the width of input fields 
+    display: flex; /* Add this line to enable flexbox 
+    justify-content: center; /* Add this line to center the input fields 
+    width: 50%; /* Increase this value to make input fields wider 
+    
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px; /* Increase padding to make input boxes larger 
+    border-radius: 5px; /* Add border-radius for a rounded appearance 
+    width: 200px;
+}
+*/
+.formbold-mb-3 {
+    margin-bottom: 20px;
+  }
+
+.formbold-input-wrapp > div {
+    display: flex;
+    gap: 20px;
+  }
+
+  .formbold-form-label {
+    color: #536387;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: auto;
+  }
+
+  .formbold-form-input {
+    flex: auto;  /* Add this line */
+    width: 100%;
+    padding: 20px 0px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+  }
+
+
+  .formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold-btn {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #6a64f1;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  
